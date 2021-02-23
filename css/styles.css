@@ -1,0 +1,250 @@
+.top-container {
+  background-color: #af8baf;
+  position: relative;
+  padding: 0 0 200px 0;
+  line-height: 2em;
+}
+
+.middle-container {
+  background-color: #584153;
+  margin: 0 auto 0 auto;
+}
+
+.bottom-container {
+  background-color: #26191b;
+  position: relative;
+  padding: 40px;
+  margin: 0;
+}
+
+.top-cloud {
+  position: absolute;
+  right: 400px;
+  top: 50px;
+}
+
+.bottom-cloud {
+  position: absolute;
+  left: 300px;
+  bottom: 300px;
+}
+
+.skill-row {
+  width: 50%;
+  margin: 100px auto 100px auto;
+  text-align: left;
+  line-height: 2;
+}
+
+.intro {
+  width: 30%;
+  margin: auto;
+}
+
+body {
+  margin: 0;
+  text-align: center;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+
+/* 16px = 100% = 1em. 90px = 562.5% 5.625em.
+width of capital letter M. em's and % also add on to the font from the body, if specified.
+whereas for pixel this is not the case as it is static, however, when the page is resized,
+if size is specified in pixel, the size will stay the same even if resized.
+rem (root em) ignores all parent settings. */
+/* top, right, bottom, left for the margin. auto means centered */
+h1 {
+  font-size: 562.5%;
+  margin: 60px auto 0 auto;
+  font-family: 'Sacramento', cursive;
+  color: #dddddd;
+}
+
+/* 25px/16px = 1.5625 */
+h2 {
+  font-size: 1.5625rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #f6acc8;
+  font-weight: normal;
+}
+
+.sub-h2 {
+  font-size: 1.25rem;
+  font-family: 'Montserrat', sans-serif;
+  color: #f6acc8;
+  font-weight: normal;
+}
+
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  color: #f6acc8;
+}
+
+p {
+  color: #dddddd;
+  line-height: 2;
+}
+
+hr {
+  border: dotted #dddddd 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 100px auto;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+.woman {
+  width: 230px;
+  height: 200px;
+  padding-top: 30px;
+}
+
+.computer {
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+}
+
+.coding {
+  width: 20%;
+  float: right;
+  margin-left: 30px;
+}
+
+.footer-link {
+  color: #ff1493;
+  font-family: 'Montserrat', sans-serif;
+  margin: 10px 20px;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #eaf6f6;
+}
+
+.contact-message {
+  width: 40%;
+  margin: 40px auto 60px;
+}
+
+.copyright {
+  color: #eaf6f6;
+  font-size: 0.75rem;
+  padding: 25px 0 0 0;
+}
+
+/*.description {
+  clear: right;
+}*/
+.btn {
+  background: #F6ACC8;
+  background-image: -webkit-linear-gradient(top, #F6ACC8, #AF8BAF);
+  background-image: -moz-linear-gradient(top, #F6ACC8, #AF8BAF);
+  background-image: -ms-linear-gradient(top, #F6ACC8, #AF8BAF);
+  background-image: -o-linear-gradient(top, #F6ACC8, #AF8BAF);
+  background-image: linear-gradient(to bottom, #F6ACC8, #AF8BAF);
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  padding: 20px;
+  border: solid #FFFFFF 0;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.btn:hover {
+  background: #edb2ec;
+  border: solid #FFC0CB 0;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0;
+  background: #f2f2f2;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  background: #af8baf;
+  padding-bottom: 75px;
+
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+}
+
+.label {
+  width: 100%;
+  padding: 20px 30px;
+  background: #af8baf;
+  cursor: pointer;
+
+  font-size: 1.25rem;
+  font-family: 'Montserrat', sans-serif;
+
+  font-weight: normal;
+  color: #dddddd;
+  transition: background 0.1s, color 0.1s;
+}
+
+.label:hover {
+  background: #584153;
+}
+
+.label:active {
+  background: #584153;
+}
+
+@media (min-width: 600px) {
+  .label {
+    width: auto;
+  }
+}
+
+input:focus + .label {
+  box-shadow: inset 0px 0px 0px 3px #2aa1c0;
+  z-index: 1;
+}
+
+ .input:checked + .label {
+  background: #584153;
+  color: ##dddddd;
+}
+
+
+.panel {
+  display: none;
+  padding: 20px 30px 30px;
+  background: #fff;
+}
+
+@media (min-width: 600px) {
+  .panel {
+    order: 99;
+  }
+}
+.input:checked + .label + .panel {
+  display: block;
+}

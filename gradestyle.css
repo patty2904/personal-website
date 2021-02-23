@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+html,body{
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: #6665ee;
+}
+::selection{
+  color: #fff;
+  background: #6665ee;
+}
+.skill-bars{
+  padding: 25px 30px;
+  width: 600px;
+  background: #fff;
+  box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+  border-radius: 10px;
+}
+.skill-bars .bar{
+  margin: 20px 0;
+}
+.skill-bars .bar:first-child{
+  margin-top: 0px;
+}
+.skill-bars .bar .info{
+  margin-bottom: 5px;
+}
+.skill-bars .bar .info span{
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line{
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+              0 1px rgba(255,255,255,0.8);
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span{
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #6665ee;
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+
+.bar .progress-line.cs span{
+  width: 75%;
+}
+.bar .progress-line.iso span{
+  width: 64%;
+}
+.bar .progress-line.fsdd span{
+  width: 68%;
+}
+.bar .progress-line.pf span{
+
+}
+.bar .progress-line.mse span{
+
+}
+
+.bar .progress-line.hci span{
+
+}
+
+.bar .progress-line.oosd span{
+  width: 81%;
+}
+
+.bar .progress-line.dbs span{
+  width: 79%;
+}
+
+.bar .progress-line.os span{
+  width: 98%;
+}
+
+.bar .progress-line.ads span{
+
+}
+
+.bar .progress-line.mad span{
+
+}
+
+.bar .progress-line.sem span{
+
+}
+
+
+.progress-line span::before{
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100%{
+    opacity: 1;
+  }
+}
+.progress-line.cs span::after{
+  content: "75%";
+}
+.progress-line.iso span::after{
+  content: "64%";
+}
+.progress-line.fsdd span::after{
+  content: "68%";
+}
+.progress-line.pf span::after{
+
+}
+.progress-line.mse span::after{
+
+}
+
+.progress-line.hci span::after{
+
+}
+
+.progress-line.oosd span::after{
+  content: "81%";
+}
+
+.progress-line.dbs span::after{
+  content: "79%";
+}
+
+.progress-line.os span::after{
+  content: "98%";
+}
+
+.progress-line.ads span::after{
+
+}
+
+.progress-line.mad span::after{
+
+}
+
+.progress-line.sem span::after{
+
+}
+
+.tooltip {
+  position:relative; /* making the .tooltip span a container for the tooltip text */
+  border-bottom:1px dashed #000; /* little indicater to indicate it's hoverable */
+}
+
+.tooltip:before {
+  content: attr(data-text); /* here's the magic */
+  position:absolute;
+
+  /* vertically center */
+  top:50%;
+  transform:translateY(-50%);
+
+  /* move to right */
+  left:100%;
+  margin-left:15px; /* and add a small left margin */
+
+  /* basic styles */
+  width:200px;
+  padding:10px;
+  border-radius:10px;
+  background:#000;
+  color: #fff;
+  text-align:center;
+
+  display:none; /* hide by default */
+
+  opacity:0;
+transition:.3s opacity;
+visibility: hidden;
+}
+
+.tooltip:hover:before {
+  display:block;
+  opacity:1;
+  visibility: visible;
+}
+
+/ .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.tooltip:after {
+  content: "";
+  position:absolute;
+
+  /* position tooltip correctly */
+  left:100%;
+  margin-left:-5px;
+
+  /* vertically center */
+  top:50%;
+  transform:translateY(-50%);
+
+  /* the arrow */
+  border:10px solid #000;
+  border-color: transparent black transparent transparent;
+
+  display:none;
+
+  opacity:0;
+ transition:.3s;
+ visibility: hidden;
+}
+.tooltip:hover:before, .tooltip:hover:after {
+  display:block;
+    opacity:1;
+    visibility: visible;
+}
